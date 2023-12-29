@@ -5,12 +5,11 @@ const About = () => {
   return (
     <>
       <div className="flex flex-col justify-center">
-        <div className="mx-28 py-2">
-          <h1 className="font-serif">About</h1>
-        </div>
-        <div className="mx-44 w-6/12 relative">
-          <div className="z-10 relative bg-[#CACACA] text-justify rounded-md p-2">
-            <p>
+        <div className="mx-28 py-2"></div>
+        <div className="w-fit relative flex items-center justify-center ">
+          <div className="z-10 w-6/12 relative p-2">
+            <h1 className="font-serif">About</h1>
+            <p className="bg-[#CACACA] text-justify rounded-md">
               Lulusan Politeknik Negeri Samarinda jurusan Teknologi Informasi
               yang memiliki ketertarikan pada bidang Frontend Developer. Lulus
               dengan IPK 3.89. Pernah mengikuti kegiatan magang bersertifikat
@@ -24,10 +23,10 @@ const About = () => {
               deployment menggunakan layanan 3rd Parties.
             </p>
           </div>
-          <div className="w-52 absolute -top-28 -right-44 -rotate-[20deg] grayscale hover:grayscale-0 ">
+          <div className="w-52 absolute  -rotate-[20deg] grayscale hover:grayscale-0 ">
             <img src={wisuda} alt="" />
           </div>
-          <div className="w-52 absolute -bottom-28 -left-44 -rotate-[20deg] grayscale hover:grayscale-0 ">
+          <div className="w-52 absolute  -rotate-[20deg] grayscale hover:grayscale-0 ">
             <img src={wisuda2} alt="" />
           </div>
         </div>

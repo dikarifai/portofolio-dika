@@ -16,7 +16,7 @@ const Sidebar = () => {
   const location = useLocation();
 
   return (
-    <div className="w-96 flex flex-col items-center bg-[#B1B1B1] gap-5 py-10 h-screen">
+    <div className="md:w-96 md:flex flex-col items-center bg-[#B1B1B1] gap-5 py-10 h-screen hidden">
       <div className="w-28 h-28">
         <img src={profilePhoto} className="rounded-full" alt="" />
       </div>
@@ -40,7 +40,11 @@ const Sidebar = () => {
           </p>
         ))}
       </div>
-      <a href="https://www.linkedin.com/in/dikarifai/" target="_blank">
+      <a
+        href="https://www.linkedin.com/in/dikarifai/"
+        target="_blank"
+        rel="noreferrer"
+      >
         <div className="flex flex-row items-center gap-1 cursor-pointer hover:text-[#E3E1E4]">
           <IoLogoLinkedin />
           Dika Rahman Rifai
