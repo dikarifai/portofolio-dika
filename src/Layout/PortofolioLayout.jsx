@@ -15,7 +15,7 @@ const PortofolioLayout = () => {
       <HamburgerMenu onClick={HandlerSidebarActive} />
       <Sidebar
         sidebarActive={sidebarActive}
-        onClickItem={HandlerSidebarActive}
+        onClickItem={() => setSidebarActive(false)}
       />
       <div className="w-full bg-[#D7D7D7] flex h-screen overflow-auto md-max:relative">
         <Outlet />
