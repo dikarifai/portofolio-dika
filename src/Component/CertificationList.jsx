@@ -13,7 +13,7 @@ const CertificationList = () => {
       {trail.map((style, index) => (
         <animated.div
           key={index}
-          className="bg-white p-2 w-full h-60 flex flex-col items-center rounded-2xl"
+          className="bg-white p-2 w-full h-60 flex flex-col items-center  rounded-2xl"
           style={style}
         >
           <div className="w-3/4 ">
