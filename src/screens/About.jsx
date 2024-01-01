@@ -1,3 +1,4 @@
+import Container from "../Component/Container";
 import wisuda from "../img/Wisuda.jpg";
 import wisuda2 from "../img/Wisuda2.jpg";
 import { useSpring, animated } from "@react-spring/web";
@@ -11,7 +12,7 @@ const About = () => {
 
   return (
     <>
-      <div className="flex flex-col justify-center overflow-hidden">
+      <Container className="flex flex-col justify-center -mt-16 overflow-hidden">
         <div className="mx-28 py-2"></div>
         <animated.div
           className="w-fit flex items-center justify-center "
@@ -19,7 +20,7 @@ const About = () => {
         >
           <div className="z-10 w-6/12 relative p-2 max-md:w-4/5">
             <h1 className="font-serif">About</h1>
-            <p className="bg-[#CACACA] text-justify relative rounded-md p-3 z-10">
+            <p className="bg-white text-justify relative rounded-md p-3 z-10">
               Lulusan Politeknik Negeri Samarinda jurusan Teknologi Informasi
               yang memiliki ketertarikan pada bidang Frontend Developer. Lulus
               dengan IPK 3.89. Pernah mengikuti kegiatan magang bersertifikat
@@ -40,7 +41,7 @@ const About = () => {
             </div>
           </div>
         </animated.div>
-      </div>
+      </Container>
     </>
   );
 };

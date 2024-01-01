@@ -12,7 +12,7 @@ const PortofolioLayout = () => {
   };
   return (
     <div className="bg-[#E1DCE0] aspect-auto flex flex-row overflow-hidden">
-      <HamburgerMenu onClick={HandlerSidebarActive} />
+      {!sidebarActive ? <HamburgerMenu onClick={HandlerSidebarActive} /> : null}
       <Sidebar
         sidebarActive={sidebarActive}
         onClickItem={() => setSidebarActive(false)}

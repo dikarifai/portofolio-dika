@@ -41,7 +41,7 @@ const Home = () => {
         </div>
       </animated.div>
       <animated.div
-        className="flex-1 flex w-full  h-screen justify-end grayscale hover:grayscale-0 max-md:justify-center max-md:absolute max-md:grayscale-0"
+        className="flex-1 flex w-full  h-screen justify-end max-md:justify-center max-md:absolute"
         style={fadeIn}
       >
         <img className="object-cover" src={homeImage} alt="" />

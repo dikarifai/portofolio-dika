@@ -4,6 +4,9 @@ import PortofolioLayout from "./Layout/PortofolioLayout";
 import Home from "./screens/Home";
 import About from "./screens/About";
 import Experience from "./screens/Experience";
+import Education from "./screens/Education";
+import Skills from "./screens/Skills";
+import Certification from "./screens/Certification";
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/experience" element={<Experience />} />
+        <Route path="/education" element={<Education />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/Certification" element={<Certification />} />
       </Route>
     </Routes>
   );
