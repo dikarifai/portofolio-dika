@@ -10,8 +10,7 @@ const Education = () => {
     config: { duration: 1000 },
   });
   return (
-    <Container className="mb-12 h-fit" style={slideIn}>
-      <h1 className="w-11/12">Education</h1>
+    <Container style={slideIn} title={"Education"}>
       {educationData.map((item) => (
         <ContentList
           company={item.name}

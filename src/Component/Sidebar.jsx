@@ -4,6 +4,7 @@ import { IoClose, IoLogoLinkedin } from "react-icons/io5";
 
 const menuSidebar = [
   { value: "Home", path: "/" },
+  { value: "Portofolio", path: "/portofolio" },
   { value: "About", path: "/about" },
   { value: "Experience", path: "/experience" },
   { value: "Education", path: "/education" },

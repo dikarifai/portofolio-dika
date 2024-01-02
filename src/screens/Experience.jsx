@@ -11,8 +11,7 @@ const Experience = () => {
   });
 
   return (
-    <Container className="mb-12 h-fit" style={slideIn}>
-      <h1 className="w-11/12">Experience</h1>
+    <Container style={slideIn} title="Experience">
       {experienceData.map((item, index) => (
         <ContentList
           company={item.company}

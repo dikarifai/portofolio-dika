@@ -12,8 +12,8 @@ const About = () => {
 
   return (
     <>
-      <Container className="flex flex-col justify-center -mt-16 overflow-hidden">
-        <div className="mx-28 py-2"></div>
+      <Container className="flex flex-col overflow-hidden">
+        <div className="mx-28 py-8"></div>
         <animated.div
           className="w-fit flex items-center justify-center "
           style={spring}
