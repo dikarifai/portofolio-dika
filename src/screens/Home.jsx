@@ -30,7 +30,7 @@ const Home = () => {
           </h1>
           <h5 className="max-md:text-xl">UI Implementation and Fetch API</h5>
           <button
-            onClick={() => navigate("/about")}
+            onClick={() => navigate("/portofolio")}
             className="border-solid border-[#60687B] border-2 w-4/5 rounded-lg p-1 active:bg-[#60687B] hover:bg-[#8595A5] flex flex-row justify-center items-center gap-1"
           >
             View Portofolio{" "}
