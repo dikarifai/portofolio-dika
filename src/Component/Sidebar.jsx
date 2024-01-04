@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import profilePhoto from "../img/profile.jpg";
-import { IoClose, IoLogoLinkedin } from "react-icons/io5";
+import { IoClose, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 
 const menuSidebar = [
   { value: "Home", path: "/" },
@@ -70,6 +70,12 @@ const Sidebar = ({ sidebarActive, onClickItem }) => {
           <div className="flex flex-row items-center gap-1 cursor-pointer hover:text-[#E3E1E4]">
             <IoLogoLinkedin />
             Dika Rahman Rifai
+          </div>
+        </a>
+        <a href="https://github.com/dikarifai" target="_blank" rel="noreferrer">
+          <div className="flex flex-row items-center gap-1 cursor-pointer hover:text-[#E3E1E4]">
+            <IoLogoGithub />
+            dikarifai
           </div>
         </a>
       </div>
