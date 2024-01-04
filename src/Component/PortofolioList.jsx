@@ -2,6 +2,7 @@ import { config, useTrail, animated } from "@react-spring/web";
 import { portofolioData } from "../data/portofolioData";
 import Modal from "./Modal";
 import { useState } from "react";
+import { IoClose } from "react-icons/io5";
 
 const PortofolioList = () => {
   const [show, setShow] = useState(false);
@@ -12,6 +13,7 @@ const PortofolioList = () => {
     api: "",
     url: "",
     img: "",
+    desc: "",
   });
 
   const trail = useTrail(portofolioData.length, {
@@ -23,6 +25,11 @@ const PortofolioList = () => {
   const modalToggle = (item) => {
     setShow(true);
     setModal(item);
+  };
+
+  const handlerClose = (e) => {
+    e.stopPropagation();
+    setShow(false);
   };
 
   return (
@@ -65,11 +72,49 @@ const PortofolioList = () => {
         </animated.div>
       ))}
       <Modal show={show} setShow={setShow}>
-        <div className="w-8/12 flex flex-col items-center bg-white">
+        <div
+          className="w-8/12 flex flex-col bg-white px-8 max-md:pax-1 max-md:w-11/12 max-md:pt-4 relative"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div
+            className="close-button text-4xl text-red-700 absolute right-3 top-3 z-50 cursor-pointer"
+            onClick={(e) => handlerClose(e)}
+          >
+            <IoClose />
+          </div>
           <div className="w-full flex justify-center bg-white">
             <img className="object-cover w-2/4" src={modal.img} alt="" />
           </div>
-          {modal.name}
+          <div className="flex flex-col gap-4">
+            <h1
+              className="font-semibold cursor-pointer w-fit hover:text-blue-600"
+              onClick={() => window.open(modal.url, "_blank")}
+            >
+              {modal.name}
+            </h1>
+            <p className="text-justify">{modal.desc}</p>
+            <div className="flex flex-col">
+              <p className="font-semibold">Teknologi: </p>
+              <div className="flex flex-row gap-1">
+                {modal.tech.map((item) => (
+                  <div className="bg-[#D7D7D7] px-2 rounded-lg">{item}</div>
+                ))}
+              </div>
+            </div>
+            <div flex flex-col>
+              <p className="font-semibold">Teknologi: </p>
+              <p
+                className="cursor-pointer hover:text-blue-600"
+                onClick={() => window.open(modal.api, "_blank")}
+              >
+                {modal.api}
+              </p>
+            </div>
+
+            <button className="bg-[#D7D7D7] p-2 rounded-xl hover:bg-[#B1B1B1]">
+              Kunjungi Aplikasi
+            </button>
+          </div>
         </div>
       </Modal>
     </div>
