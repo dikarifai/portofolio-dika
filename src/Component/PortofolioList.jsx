@@ -54,18 +54,20 @@ const PortofolioList = () => {
                     <div className="bg-white px-2 rounded-lg">{item}</div>
                   ))}
                 </div>
-                <div className="flex flex-col ">
-                  <p className="font-semibold">API:</p>
-                  <a
-                    target="_blank"
-                    href="https://fakestoreapi.com/"
-                    rel="noreferrer"
-                    className="hover:bg-[#D7D7D7]"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <p>{portofolioData[index].api}</p>
-                  </a>
-                </div>
+                {portofolioData[index].api ? (
+                  <div className="flex flex-col ">
+                    <p className="font-semibold">API:</p>
+                    <a
+                      target="_blank"
+                      href="https://fakestoreapi.com/"
+                      rel="noreferrer"
+                      className="hover:bg-[#D7D7D7]"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <p>{portofolioData[index].api}</p>
+                    </a>
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>
@@ -101,17 +103,21 @@ const PortofolioList = () => {
                 ))}
               </div>
             </div>
-            <div flex flex-col>
-              <p className="font-semibold">Teknologi: </p>
-              <p
-                className="cursor-pointer hover:text-blue-600"
-                onClick={() => window.open(modal.api, "_blank")}
-              >
-                {modal.api}
-              </p>
-            </div>
-
-            <button className="bg-[#D7D7D7] p-2 rounded-xl hover:bg-[#B1B1B1]">
+            {modal.api ? (
+              <div flex flex-col>
+                <p className="font-semibold">API: </p>
+                <p
+                  className="cursor-pointer hover:text-blue-600"
+                  onClick={() => window.open(modal.api, "_blank")}
+                >
+                  {modal.api}
+                </p>
+              </div>
+            ) : null}
+            <button
+              className="bg-[#D7D7D7] p-2 rounded-xl hover:bg-[#B1B1B1]"
+              onClick={() => window.open(modal.url, "_blank")}
+            >
               Kunjungi Aplikasi
             </button>
           </div>
